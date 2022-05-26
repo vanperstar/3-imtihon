@@ -4,11 +4,11 @@ function sumInput() {
   
     while (true) {
   
-      let value = prompt("Sonni kiriting: ", );
+      let value = prompt("Sonni kiriting: ",);
 
-      let layut = prompt("Miqdorni kiriting")
+      let layut = prompt("Miqdorni kiriting:")
 
-      if (value === " " || value === layut || !isFinite(value)) break;
+      if (+value === " " || value === layut || isFinite(value)) break;
       numbers.push(value);
     }
   
@@ -40,8 +40,8 @@ function sumSalaries(salaries) {
     }
     return sum 
 }
-
-console.log(sumSalaries([1200, 5200, 1800]))
+// alert(sumSalaries([1200, 5200, 1800])+ "  Akmal 1200, Salim 5200, Karima 1800")
+console.log(sumSalaries([1200, 5200, 1800])+ "  Akmal 1200, Salim 5200, Karima 1800")
 
 
 
