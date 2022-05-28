@@ -1,48 +1,30 @@
-function sumInput() {
+var numbers = []
 
-    var numbers = [];
-  
-    while (true) {
-  
-      let value = prompt("Sonni kiriting: ",);
+for(;true;){
+    let numberEl = prompt("Raqam kiriting:", 0);
 
-      let layut = prompt("Miqdorni kiriting:")
-
-      if (+value === " " || value === layut || isFinite(value)) break;
-      numbers.push(value);
-    }
-  
-    let sum = 0;
-    for (let i=0 ; i<numbers.length; i++) {
-      sum += numbers[i];
-    }
-    return sum;
-  }
-  
-  alert( sumInput() );
-
-
-
-
-// const salaries = [1200, 5200, 1800]
-        
-// var sum = 0
-// for (var i = 0; i < salaries.length; i++) {
-//     sum += salaries[i]
-// }
-// // alert(sum += " Akmal Salim Karima")
-// console.log(sum += " Akmal Salim Karima")
-
-function sumSalaries(salaries) {
-    var sum = 0;
-    for (var i = 0; i < salaries.length; i++){
-        sum += salaries[i]
-    }
-    return sum 
+    if(!numberEl || isNaN(numberEl-0))break;
+    numbers.push(numberEl-0)
 }
-// alert(sumSalaries([1200, 5200, 1800])+ "  Akmal 1200, Salim 5200, Karima 1800")
-console.log(sumSalaries([1200, 5200, 1800])+ "  Akmal 1200, Salim 5200, Karima 1800")
+let sum =0 
+for(let i=0; i< numbers.length; i++)sum+=numbers[i];
+alert(sum)
 
+
+
+var salaries = {
+    Ahmad:1200,
+    Salim:5200,
+    Karima:1800
+}
+function sumSalaries(obj){
+    let sum = 0
+    for (key in obj)
+        sum+=obj[key]
+    return sum
+}
+
+console.log(sumSalaries(salaries))
 
 
 
